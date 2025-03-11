@@ -27,7 +27,7 @@ function criarLista(){
         let liHTML = document.createElement("li")
 
         liHTML.innerHTML = `
-            ${tarefa.tarefa} ${tarefa.prazo.toLocaleTimeString()} 
+            ${tarefa.tarefa} ${tarefa.prazo.toLocaleTimeString()} <input type = "checkbox" class = "check">
         `
     ulHTML.appendChild(liHTML)
     });
