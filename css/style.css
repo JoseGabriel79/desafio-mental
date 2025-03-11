@@ -10,7 +10,7 @@ header{
     display: flex;
   
     align-items: center;
-    background-color: rgb(18, 224, 197);
+    background-color: rgb(154, 155, 155);
 }
 header img{
     width: 40%;
@@ -36,4 +36,9 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+
+#container ul{
+    list-style-type: none;
 }
