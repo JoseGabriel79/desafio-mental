@@ -1,3 +1,42 @@
+// Obtendo os elementos
+var modalPrincipal = document.getElementById("modalPrincipal");
+var modalSecundario = document.getElementById("modalSecundario");
+var btnAbrirModalPrincipal = document.getElementById("abrirModalPrincipalBtn");
+var btnAbrirModalSecundario = document.getElementById("abrirModalSecundarioBtn");
+var btnFecharModalSecundario = document.getElementById("fecharSecundarioBtn");
+var btnFecharModalPrincipal = document.getElementsByClassName("fechar-modal");
+
+// Abrir o modal principal
+btnAbrirModalPrincipal.onclick = function() {
+    modalPrincipal.style.display = "block";
+    cadastrarTarefa()
+}
+
+// Fechar o modal principal
+btnFecharModalPrincipal[0].onclick = function() {
+    modalPrincipal.style.display = "none";
+}
+
+
+// Fechar o modal secundário
+btnFecharModalSecundario.onclick = function() {
+    modalSecundario.style.display = "none";
+}
+
+// Fechar o modal principal ao clicar fora do conteúdo
+window.onclick = function(event) {
+    if (event.target == modalPrincipal) {
+        modalPrincipal.style.display = "none";
+    }
+    if (event.target == modalSecundario) {
+        modalSecundario.style.display = "none";
+    }
+}
+
+
+
+
+
 var listaDeTarefas = [
     {
         tarefa: "Dormir",
@@ -18,11 +57,12 @@ function cadastrarTarefa(){
     conteudoModalHTML.style.flexDirection = "column-reverse"
 
     divModalHTML.innerHTML = `
-        <h2>Cadastrar Tarefa</h2>
+        <h1>Cadastrar Tarefa</h1>
         <input type = "text" placeholder = "Qual o nome da Tarefa?">
         <input type="date" id="data" name="data" min="2025-01-01" max="3945-12-31">
-
+        <button onclick = "finalizarCadastro()" id="abrirModalSecundarioBtn">Abrir Modal Secundário</button>
     `
+    conteudoModalHTML.innerHTML = " "
     conteudoModalHTML.appendChild(divModalHTML)
     
     // alert( "A tarefa: " + tarefa.tarefa + " com prazo até " + tarefa.prazo.toLocaleTimeString() + " Foi CADASTRADA!")
@@ -43,45 +83,17 @@ function criarLista(){
     });
 
 }
+
+function finalizarCadastro() {
+    modalSecundario.style.display = "block";
+    
+    // Fechar o modal secundário automaticamente após 3 segundos
+    setTimeout(function() {
+        modalSecundario.style.display = "none";
+    }, 5000); // 3000 milissegundos = 3 segundos
+}
+
 criarLista()
 
 
 
-// Obtendo os elementos
-var modalPrincipal = document.getElementById("modalPrincipal");
-var modalSecundario = document.getElementById("modalSecundario");
-var btnAbrirModalPrincipal = document.getElementById("abrirModalPrincipalBtn");
-var btnAbrirModalSecundario = document.getElementById("abrirModalSecundarioBtn");
-var btnFecharModalSecundario = document.getElementById("fecharSecundarioBtn");
-var btnFecharModalPrincipal = document.getElementsByClassName("fechar-modal");
-
-// Abrir o modal principal
-btnAbrirModalPrincipal.onclick = function() {
-    modalPrincipal.style.display = "block";
-    cadastrarTarefa()
-}
-
-// Fechar o modal principal
-btnFecharModalPrincipal[0].onclick = function() {
-    modalPrincipal.style.display = "none";
-}
-
-// Abrir o modal secundário dentro do modal principal
-btnAbrirModalSecundario.onclick = function() {
-    modalSecundario.style.display = "block";
-}
-
-// Fechar o modal secundário
-btnFecharModalSecundario.onclick = function() {
-    modalSecundario.style.display = "none";
-}
-
-// Fechar o modal principal ao clicar fora do conteúdo
-window.onclick = function(event) {
-    if (event.target == modalPrincipal) {
-        modalPrincipal.style.display = "none";
-    }
-    if (event.target == modalSecundario) {
-        modalSecundario.style.display = "none";
-    }
-}
