@@ -15,12 +15,31 @@
         <img src="../img/logo-Photoroom.png" alt="">
         <h1>Mind`sFlex</h1>
     </header>
-    <button id="cadastrar" onclick="cadastrarTarefa()">Cadastrar Tarefa</button>
+    <button id="abrirModalPrincipalBtn" class="cadastrar">Cadastrar Tarefa</button>
     <div id="container">
+
+        <div id="modalPrincipal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <span class="fechar-modal">&times;</span>
+                <!-- Botão para abrir o modal secundário -->
+                <button id="abrirModalSecundarioBtn">Abrir Modal Secundário</button>
+            </div>
+        </div>
+    
+        <!-- Modal Secundário (Aninhado) -->
+        <div id="modalSecundario" class="modal">
+            <div class="modal-content">
+                <span class="fechar-modal">&times;</span>
+                <h2>Este é o Modal Secundário</h2>
+                <p>Aqui está o conteúdo do modal secundário.</p>
+                <button id="fecharSecundarioBtn">Fechar Modal Secundário</button>
+            </div>
+        </div>
+
         <h1>Metas</h1>
         <ul id="listaTarefas"></ul>
     </div>
-    
+
 
     <script src="../js/script.js"></script>
 </body>
