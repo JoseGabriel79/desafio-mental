@@ -43,7 +43,9 @@ body{
 #container ul{
     list-style-type: none;
 }
-
+h2{
+    color: rgb(13, 161, 13);
+}
 
 
 /* Estilo do modal */
@@ -85,4 +87,8 @@ body{
     text-decoration: none;
     cursor: pointer;
 
+}
+
+.check-gif{
+    width: 200px;
 }
