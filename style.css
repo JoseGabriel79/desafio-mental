@@ -138,7 +138,12 @@ span {
     padding: 15px;
     border-radius: 20px;
 }
-
+#listaTarefas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .motivacao ul {
 
     display: flex;
