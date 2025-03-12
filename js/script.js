@@ -40,8 +40,11 @@ function criarLista(){
         let liHTML = document.createElement("li")
         
         liHTML.innerHTML = `
-        ${tarefa.tarefa} - Prazo: ${tarefa.prazo.toLocaleDateString()} 
-        <input type="checkbox" class="check">
+        <span>
+            <h4>${tarefa.tarefa} - Prazo: ${tarefa.prazo.toLocaleDateString()}</h4>
+            <input type="checkbox" class="check">
+        </span>
+        
         `;
         ulHTML.appendChild(liHTML)
     });
