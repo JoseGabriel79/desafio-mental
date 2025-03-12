@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind`sFlex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img-logo-Photoroom.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <img src="logo-Photoroom.png" alt="">
+        <h1>Mind'sFlex</h1>
+    </header>
+    <button id="abrirModalPrincipalBtn" class="cadastrar">Cadastrar Tarefa</button>
+    <div id="container">
+
+        <div id="modalPrincipal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <span class="fechar-modal">&times;</span>
+                <!-- Botão para abrir o modal secundário -->
+
+            </div>
+        </div>
+
+        <!-- Modal Secundário (Aninhado) -->
+        <div id="modalSecundario" class="modal">
+            <div class="modal-content">
+                <span id="fecharSecundarioBtn" class="fechar-modal">&times;</span>
+                <img src="check-gif.gif" alt="" class="check-gif">
+                <h2>Cadastrado com sucesso!</h2>
+            </div>
+        </div>
+        <div class="listaInformacoes">
+            <h1>Metas</h1>
+            <ul id="listaTarefas"></ul>
+        </div>
+        <div class="motivacao">
+            <h1>Frases Motivacionais</h1>
+            <ul>
+                <li>Tente mover o mundo - o primeiro passo será mover a si mesmo.</li>
+                <li>Se você não vivenciar o fracasso, não saberá reconhecer quando o sucesso realmente chegar.</li>
+                <li>A vida é uma maratona sem fim. Não fique parado por muito tempo; ao invés disso, concentre-se no próximo ponto.</li>
+                <li>Você é mais forte do que as suas desculpas.</li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
