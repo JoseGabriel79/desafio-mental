@@ -10,7 +10,7 @@ var listaDeTarefas = [
 ]
 
 
-function criarMenuCadastroTarefa() {
+function criarMenuCadastroTarefa(){
     let conteudoModalHTML = document.getElementById("modal-content")
     let divModalHTML = document.createElement("div")
     conteudoModalHTML.style.display = "flex"
@@ -25,20 +25,20 @@ function criarMenuCadastroTarefa() {
     conteudoModalHTML.innerHTML = " "
     conteudoModalHTML.appendChild(divModalHTML)
     // alert( "A tarefa: " + tarefa.tarefa + " com prazo até " + tarefa.prazo.toLocaleTimeString() + " Foi CADASTRADA!")
-
+    
 }
 
 // function cadastrarTarefa(){
-
+    
 // }
 
-function criarLista() {
+function criarLista(){
     let ulHTML = document.getElementById("listaTarefas")
     ulHTML.innerHTML = ""
-
+    
     listaDeTarefas.forEach(tarefa => {
         let liHTML = document.createElement("li")
-
+        
         liHTML.innerHTML = `
         <span>
             <h4>${tarefa.tarefa} - Prazo: ${tarefa.prazo.toLocaleDateString()}</h4>
@@ -48,29 +48,23 @@ function criarLista() {
         `;
         ulHTML.appendChild(liHTML)
     });
-    let botao = document.createElement("button")
-    botao.id = "abrirModalPrincipalBtn"
-    botao.className = "cadastrar"
-    botao.textContent = "Cadastrar Tarefa"
-
-    ulHTML.appendChild(botao)
-
+    
 }
 
 function finalizarCadastro() {
     let inputTarefaHTML = document.getElementById("inptTarefa").value
     let inputPrazoHTML = document.getElementById("inptPrazo").value
     let prazoConvertido = new Date(inputPrazoHTML)
-    let novaTarefa = {
-        tarefa: inputTarefaHTML,
-        prazo: prazoConvertido
-    }
+   let novaTarefa = {
+    tarefa: inputTarefaHTML,
+    prazo: prazoConvertido
+   }
 
-    listaDeTarefas.push(novaTarefa)
+   listaDeTarefas.push(novaTarefa)
     modalSecundario.style.display = "block";
-
+    
     // Fechar o modal secundário automaticamente após 3 segundos
-    setTimeout(function () {
+    setTimeout(function() {
         modalSecundario.style.display = "none";
         modalPrincipal.style.display = "none";
     }, 5000); // 3000 milissegundos = 3 segundos
@@ -91,24 +85,24 @@ var btnFecharModalSecundario = document.getElementById("fecharSecundarioBtn");
 var btnFecharModalPrincipal = document.getElementsByClassName("fechar-modal");
 
 // Abrir o modal principal
-btnAbrirModalPrincipal.onclick = function () {
+btnAbrirModalPrincipal.onclick = function() {
     modalPrincipal.style.display = "block";
     criarMenuCadastroTarefa()
 }
 
 // Fechar o modal principal
-btnFecharModalPrincipal[0].onclick = function () {
+btnFecharModalPrincipal[0].onclick = function() {
     modalPrincipal.style.display = "none";
 }
 
 
 // Fechar o modal secundário
-btnFecharModalSecundario.onclick = function () {
+btnFecharModalSecundario.onclick = function() {
     modalSecundario.style.display = "none";
 }
 
 // Fechar o modal principal ao clicar fora do conteúdo
-window.onclick = function (event) {
+window.onclick = function(event) {
     if (event.target == modalPrincipal) {
         modalPrincipal.style.display = "none";
     }
