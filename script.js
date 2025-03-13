@@ -28,7 +28,6 @@ function criarMenuCadastroTarefa() {
 
   
 }
-    conteudoModalHTML.appendChild(divModalHTML)
 
     
 
@@ -42,10 +41,7 @@ function criarLista() {
         liHTML.innerHTML = `
         <span>
             <h4>${tarefa.tarefa} - Prazo: ${tarefa.prazo.toLocaleDateString()}</h4>
-
             <input value="${index}" onclick = "excluirTarefa()" type="checkbox" class="check openModalBtn">
-
-            <input type="checkbox" class="check" id="check"   onclick ="removerCampo()">
         </span>
         `
         ulHTML.appendChild(liHTML)
