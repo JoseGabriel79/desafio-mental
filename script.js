@@ -61,6 +61,13 @@ function criarLista() {
 function finalizarCadastro() {
     let inputTarefaHTML = document.getElementById("inptTarefa").value
     let inputPrazoHTML = document.getElementById("inptPrazo").value
+    if(inputTarefaHTML === "" || inputTarefaHTML=== null || inputPrazoHTML==="" || inputPrazoHTML===null){
+        alert("❌PREENCHA OS CAMPOS CORRETAMENTE❌")
+        inputTarefaHTML.value = ""
+        inputPrazoHTML.value = ""
+        criarMenuCadastroTarefa()
+        return 
+    }
     let prazoConvertido = new Date(inputPrazoHTML)
     let novaTarefa = {
         tarefa: inputTarefaHTML,
