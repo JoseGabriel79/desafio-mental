@@ -65,6 +65,9 @@ function criarLista() {
 function finalizarCadastro() {
     let inputTarefaHTML = document.getElementById("inptTarefa").value
     let inputPrazoHTML = document.getElementById("inptPrazo").value
+    if(inputPrazoHTML == "" || inputPrazoHTML){
+
+    }
     let prazoConvertido = new Date(inputPrazoHTML)
     let novaTarefa = {
         tarefa: inputTarefaHTML,
