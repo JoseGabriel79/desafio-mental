@@ -42,7 +42,7 @@ function criarLista(){
         liHTML.innerHTML = `
         <span>
             <h4>${tarefa.tarefa} - Prazo: ${tarefa.prazo.toLocaleDateString()}</h4>
-            <input type="checkbox" class="check">
+            <input type="checkbox" class="check" id="check"   onclick ="removerCampo()">
         </span>
         
         `;
@@ -50,6 +50,7 @@ function criarLista(){
     });
     
 }
+
 
 function finalizarCadastro() {
     let inputTarefaHTML = document.getElementById("inptTarefa").value
@@ -110,3 +111,4 @@ window.onclick = function(event) {
         modalSecundario.style.display = "none";
     }
 }
+
