@@ -12,3 +12,19 @@ div #opcaoDicas{
     gap: 15px;
     justify-content: space-between;
 }
+#mostrarDicas{
+    border: 0px;
+    width: 100px;
+    background-color: black;
+    color: #ffffff;
+ padding: 5px;
+ border-radius: 05px;
+
+
+
+}
+#mostrarDicas:hover{
+    background-color: #14ce23;
+
+
+}
