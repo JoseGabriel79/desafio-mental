@@ -23,14 +23,14 @@ function criarMenuCadastroTarefa() {
         <button onclick = "finalizarCadastro()" id="abrirModalSecundarioBtn">Cadastrar</button>
     `
     conteudoModalHTML.innerHTML = " "
-    conteudoModalHTML.appendChild(divModalHTML)
-    // alert( "A tarefa: " + tarefa.tarefa + " com prazo até " + tarefa.prazo.toLocaleTimeString() + " Foi CADASTRADA!")
 
+  conteudoModalHTML.appendChild(divModalHTML)
+
+  
 }
+    conteudoModalHTML.appendChild(divModalHTML)
 
-// function cadastrarTarefa(){
-
-// }
+    
 
 function criarLista() {
     let ulHTML = document.getElementById("listaTarefas")
