@@ -206,4 +206,6 @@ span {
     justify-content: center;
     align-items: center;
 }
-/* .modal-bod   */
+.modal-body img{
+    width: 50%;
+}
