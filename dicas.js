@@ -27,7 +27,8 @@ dicas = [
 let opcaoCheck = ["estresse","irritacao","nervosismo","pensamentosIntrusivos"]
 
 function criarListaDeDicas(listaParaCriar) {
-
+    
+    let div = document.createElement("div")
     let testeDicasHTML = document.getElementById("testeDicas")
 
     dicas.forEach((item, index)=> {
@@ -40,12 +41,13 @@ function criarListaDeDicas(listaParaCriar) {
             item.dicas.forEach(dica => {
                 let li = document.createElement("li")
                 li.textContent = dica
+                
                 divOlHtml.appendChild(li)
             })
     
             testeDicasHTML.appendChild(h2Situacao)
             testeDicasHTML.appendChild(divOlHtml)
-
+            
         }
     });
 
