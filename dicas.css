@@ -12,8 +12,12 @@ div #opcaoDicas{
     color: black;
     padding-bottom: 10px;
 }
-#opcaoDicas{
-    
+#testeDicas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
 }
 .itemDica {
     display: flex;
