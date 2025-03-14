@@ -3,14 +3,21 @@ div #opcaoDicas{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: #dadada;
     padding: 15px;
     border-radius: 20px;
 }
+#opcaoDicas h2{
+    color: black;
+    padding-bottom: 10px;
+}
+#opcaoDicas{
+    
+}
 .itemDica {
     display: flex;
     gap: 15px;
-    justify-content: space-between;
 }
 #mostrarDicas{
     border: 0px;
