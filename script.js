@@ -7,6 +7,15 @@ var listaDeTarefas = [
         tarefa: "Correr",
         prazo: new Date(2025, 2, 11),
     },
+
+    {
+        tarefa: "Lavar Louça",
+        prazo: new Date(2025, 2, 14),
+    },
+    {
+        tarefa: "Limpar Casa",
+        prazo: new Date(2025, 2, 11),
+    },
 ]
 
 
