@@ -43,3 +43,24 @@ div #opcaoDicas{
 
 
 }
+.voltar {
+    width: 100px;
+    color: #fff;
+    background-color: black;
+    border-radius: 05px;
+    border: 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.voltar:hover {
+    background-color: rgb(26, 167, 26);
+    border: 0px;
+}
+
+.div-voltar{
+    padding-top: 5px;
+    padding-left: 15px;
+    width: 100%;
+}
